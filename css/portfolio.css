@@ -150,24 +150,27 @@ div#btn-container button {
     cursor: pointer;
 }
 
-.filtercards-btn button:active {
+div#btn-container button:hover {
     background-color: black;
 }
 
-button.filtercards-btn:hover {
-    background-color: green;
+div#btn-container button.active {
+    background-color: #04aa6d;
 }
 
-div.main-cotainer {
-    margin-top: 100px;
-    max-width: 1000px;
+
+
+
+.main-cotainer {
+
 }
+
 
 div.main-title {
     margin: auto;
     text-align: center;
     margin-bottom: 100px;
-
+    
 }
 
 div#btn-container {
@@ -179,10 +182,11 @@ div#btn-container {
 
 
 
-#main-title {
+h1#main-title {
     font-size: 50px;
     font-weight: bold;
     color: black;
+    margin-top: 100px;
 }
 
 
@@ -213,4 +217,4 @@ div#btn-container {
 .show {
     display: block;
 }
-
+ */
