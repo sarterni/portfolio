@@ -113,10 +113,10 @@ button.link-project:hover {
 }
 
 .column {
-    float: left;
-    width: 75%; /* Augmenter la largeur ici */
-    display: none;
-}
+        display: flex;
+        flex-direction: column;
+    }
+
 
 div.row {
     display: flex;
@@ -207,6 +207,7 @@ h1#main-title {
 
 
 .content {
+    flex: 1 0 auto;
     width: 50%;
     height: 50%;
     background-color: white;
