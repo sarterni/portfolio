@@ -5,19 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
     <title>Acceuil | NDS</title>
 </head>
 
 <body>
 
     <ul class="nav-menu">
-        <img src="../img/Acoustic guitar, music note with line logo.png" alt="" class="navbar-image">
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+        <button class="nav-Togle-btn" onclick="toggleNav()">☰</button>
+        <div class="navbar-image">
+            <img src="img/logoNDS.png" alt="" />
+        </div>
+        <div class="nav-content">
+            <li>
+                <a class="active" href="https://nicodigitalsstudio.com/">home</a>
+            </li>
+            <li>
+                <a href="https://webportrait.nicodigitalsstudio.com/">webportrait</a>
+            </li>
+            <li>
+                <a href="https://weather-app.nicodigitalsstudio.com/">weather</a>
+            </li>
+            <li><a href="https://games.nicodigitalsstudio.com/">my games</a></li>
+            <li>
+                <a href="https://games.nicodigitalsstudio.com/podcast/podcast.html">podcast</a>
+            </li>
+            <li><a href="">portfolio</a></li>
+            <li><a href="">support me</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">about</a></li>
+        </div>
+        <div class="Restricted">
+            <input id="input-restricted" type="text" placeholder="Mot de passe" /><br />
+            <a href="RestrictedAccess.html" style="text-decoration: none">
+                <button id="go-to-restrcted" disabled>Connectez vous</button>
+            </a>
+        </div>
     </ul>
+
+
 
     <div class="main-cotainer">
         <div class="main-title">
@@ -36,16 +62,25 @@
         </div>
 
 
-        <div class="card">
+        <div class="card-container">
             <div class="row">
                 <div class="column web">
                     <div class="content">
-                        <img src="img/mountains.jpg" alt="Mountains" style="width:100%">
+                        <img src="./img/icon512_maskable.png" alt="Mountains" style="width:100%">
                         <h4>Mountains</h4>
                         <p>Lorem ipsum dolor..</p>
-                        <a href="../navbarr/navbarr.html" style="text-decoration:none">
-                            <button class="link-project">Open</button>
-                        </a>
+                        <div class="link">
+                            <a href="https://weather-app.nicodigitalsstudio.com/" style="text-decoration:none">
+                                <button class="open-project">Wiew project</button>
+                            </a>
+                            <a href="https://github.com/sarterni/weather_app_NDS" style="text-decoration:none">
+                                <button class="open-github">Open in Github</button>
+                            </a>
+                            <a href="https://weather-app.nicodigitalsstudio.com/" style="text-decoration:none">
+                                <button class="open-github">Open in Github</button>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
                 <div class="column web">

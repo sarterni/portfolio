@@ -2,22 +2,58 @@ html {
     display: block;
 }
 
+
 body {
     margin: 0;
-
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
+
+.nav-menu {
+    z-index: 1000;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 5%;
+    padding-left: 20px;
+
+}
+
 .navbar-image {
-    width: 5%;
-    height: 5%;
-    margin-right: 10%;
+    display: flex; 
+    align-items: center; 
+
+}
+
+.navbar-image img {
+    width: 100px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-content {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
 }
 
 
+
+
+
 li {
-    float: left;
+    display: inline-block;
 }
 
 li a {
@@ -33,28 +69,73 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: #04aa6d;
 }
 
-.nav-menu {
-    list-style-type: none;
 
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+div.Restricted {
+float: right;
+}
+
+.nav-Togle-btn {
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    
+}
+.nav-Togle-btn:hover {
+    background-color: #111;
+    color: white;
+    
+}
+
+div.link {
     display: flex;
-    margin: 0;
-
+    justify-content: space-between; /* Pour ajouter de l'espace entre les boutons */
 }
 
 
-.nav-menu li {
-    flex: 1;
+div.link button {
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 10px 24px;
+    cursor: pointer;
 }
+
+button.link-project:hover {
+    background-color: black;
+}
+
+.column {
+    float: left;
+    width: 75%; /* Augmenter la largeur ici */
+    display: none;
+}
+
+div.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+div.card-container {
+    display: block;
+    margin: auto;
+    width: 95%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
 
 div#btn-container button {
     background-color: gray;
@@ -104,19 +185,6 @@ div#btn-container {
     color: black;
 }
 
-div.card {
-    margin: auto;
-    width: 70%;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-}
-
-.row {
-    margin: 10px -16px;
-}
 
 
 .row,
@@ -125,12 +193,6 @@ div.card {
 }
 
 
-.column {
-    float: left;
-    width: 33.33%;
-    display: none;
-
-}
 
 
 .row:after {
@@ -152,22 +214,3 @@ div.card {
     display: block;
 }
 
-
-
-
-button.link-project {
-    background-color: cornflowerblue;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    padding: 10px 24px;
-    cursor: pointer;
-}
-
-button.link-project:hover {
-    background-color: black;
-}
