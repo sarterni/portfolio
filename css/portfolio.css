@@ -118,7 +118,7 @@ button.link-project:hover {
     }
 
 
-div.row {
+.row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -207,13 +207,12 @@ h1#main-title {
 
 
 .content {
-    flex: 1 0 auto;
-    width: 50%;
-    height: 50%;
-    background-color: white;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        width: calc(33.33% - 16px); /* Adjust width as per your requirement */
+        margin: 8px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
 }
 
 
