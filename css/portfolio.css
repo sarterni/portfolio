@@ -96,6 +96,8 @@ div.link {
 
 
 div.link button {
+    width: 120px;
+    height: 75px;
     background-color: cornflowerblue;
     border: none;
     color: white;
@@ -103,8 +105,6 @@ div.link button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    padding: 10px 24px;
     cursor: pointer;
 }
 
@@ -152,6 +152,10 @@ div#btn-container button {
 
 div#btn-container button:hover {
     background-color: black;
+}
+
+div.link button:hover {
+    background-color: #04aa6d;
 }
 
 div#btn-container button.active {
@@ -207,9 +211,9 @@ h1#main-title {
 
 
 .content {
-        width: calc(33.33% - 16px); /* Adjust width as per your requirement */
-        margin: 8px;
+        width: calc(27%); /* Adjust width as per your requirement */
         background-color: white;
+        margin: 8px;
         padding: 10px;
         border-radius: 4px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, .5);

@@ -1,44 +1,26 @@
-filterSelection("all")
-function filterSelection(c) {
-    let x, i;
-    x = document.getElementsByClassName("column");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    }
-}
+// Define the filterSelection function
+function filterSelection(category) {
+    // Get all the elements with the class name 'column'
+    const columns = document.getElementsByClassName('column');
 
-function w3AddClass(element, name) {
-    let i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-    }
-}
+    // Loop through each column element
+    for (let i = 0; i < columns.length; i++) {
+        const column = columns[i];
 
-function w3RemoveClass(element, name) {
-    let i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
+        // Check if the column has the specified category
+        if (column.classList.contains(category)) {
+            // Display the column with the specified category
+            column.style.display = 'block';
+        } else {
+            // Hide the column without the specified category
+            column.style.display = 'none';
         }
     }
-    element.className = arr1.join(" ");
 }
 
+// Call the filterSelection function with the 'web' category
+filterSelection('web');
+filterSelection('cars');
 
-// Add active class to the current button (highlight it)
-let btnContainer = document.getElementById("myBtnContainer");
-let btns = btnContainer.getElementsByClassName("filtercards-btn");
 
-for (const element of btns) {
-    element.addEventListener("click", function () {
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
+
