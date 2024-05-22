@@ -1,5 +1,5 @@
 // Define the filterSelection function
-function filterSelection(category) {
+function filterSelection(categories) {
     // Get all the elements with the class name 'column'
     const columns = document.getElementsByClassName('column');
 
@@ -7,20 +7,13 @@ function filterSelection(category) {
     for (let i = 0; i < columns.length; i++) {
         const column = columns[i];
 
-        // Check if the column has the specified category
-        if (column.classList.contains(category)) {
-            // Display the column with the specified category
-            column.style.display = 'block';
-        } else {
-            // Hide the column without the specified category
-            column.style.display = 'none';
-        }
+        // Check if the column has any of the specified categories
+        const hasCategory = categories.some(category => column.classList.contains(category));
+
+        // Display the column if it has any of the specified categories, hide it otherwise
+        column.style.display = hasCategory ? 'block' : 'none';
     }
 }
 
-// Call the filterSelection function with the 'web' category
-filterSelection('web');
-filterSelection('cars');
-
-
-
+// Call the filterSelection function with the 'web' and 'cars' categories
+filterSelection(['web', 'cars']);
